@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/icons/renlin-code-favicon.ico">
+    <link rel="stylesheet" href="./styles/main.css">
+    <!-- <link rel="stylesheet" href="./css/small-tablet.css" media="(min-width: 680px)">
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 860px)"> -->
+    <script async src="./js/flickity.pkgd.min"></script>
+    <script async src="./js/rem.js"></script>
+    <script async src="./js/main.js"></script>
+    <title>Рене Линарес</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content-wrapper">
+            <div class="header__content">
+                <a href="" class="header__logo">
+                    <svg viewBox="0 0 177 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.4528 7.3712C1.3744 7.3712 0.22 8.792 0.22 11.9296V23H3.3576V12.4032C3.3576 11.0416 3.9792 10.3904 5.3704 10.3904H10.876V7.3712H4.4528ZM19.072 7.3712C15.1648 7.3712 13.6256 9.5616 13.6256 12.5216V17.8496C13.6256 20.8096 15.1648 23 19.072 23H28.6328V19.9512H19.072C17.3552 19.9512 16.6744 19.0336 16.6744 17.7904V16.6656H24.104C27.952 16.6656 29.4024 15.0376 29.4024 12.1664C29.4024 9.1472 27.8336 7.3712 24.1336 7.3712H19.072ZM16.6744 12.5512C16.6744 11.3376 17.3552 10.3904 19.072 10.3904H24.104C25.6432 10.3904 26.324 11.16 26.324 12.344C26.324 13.4984 25.7024 14.2088 24.0152 14.2088H16.6744V12.5512ZM35.4509 7.3712C33.8821 7.3712 33.2605 7.9632 33.2605 9.7984V23H36.3981V10.8344C36.3981 10.5384 36.5165 10.3904 36.7829 10.3904H41.9037C45.1893 10.3904 46.6101 11.752 46.6101 14.2088V23H49.7773V14.2088C49.7773 9.8872 47.2021 7.3712 41.9037 7.3712H35.4509ZM54.1887 0.592799V23H57.3263V0.592799H54.1887ZM61.8199 7.3712V23H64.9575V7.3712H61.8199ZM61.8199 1.4808V5.1216H64.9871V1.4808H61.8199ZM71.6416 7.3712C70.0728 7.3712 69.4512 7.9632 69.4512 9.7984V23H72.5888V10.8344C72.5888 10.5384 72.7072 10.3904 72.9736 10.3904H78.0944C81.38 10.3904 82.8008 11.752 82.8008 14.2088V23H85.968V14.2088C85.968 9.8872 83.3928 7.3712 78.0944 7.3712H71.6416ZM108.703 7.3712C104.529 7.3712 101.924 9.9168 101.924 15.1856C101.924 20.4544 104.529 23 108.703 23H116.754V19.9512H108.999C106.276 19.9512 105.092 18.56 105.092 15.1856C105.092 11.8112 106.276 10.3904 108.999 10.3904H116.754V7.3712H108.703ZM126.509 7.3712C122.335 7.3712 119.731 9.9168 119.731 15.1856C119.731 20.4544 122.335 23 126.509 23H129.795C133.939 23 136.573 20.4544 136.573 15.1856C136.573 9.9168 133.939 7.3712 129.795 7.3712H126.509ZM129.499 10.3904C132.192 10.3904 133.406 11.8112 133.406 15.1856C133.406 18.56 132.192 19.9512 129.499 19.9512H126.805C124.082 19.9512 122.898 18.56 122.898 15.1856C122.898 11.8112 124.082 10.3904 126.805 10.3904H129.499ZM153.264 0.592799V7.3712H146.368C142.194 7.3712 139.589 9.9168 139.589 15.1856C139.589 20.4544 142.194 23 146.368 23H150.689C154.419 23 156.432 20.8096 156.432 16.3104V0.592799H153.264ZM149.772 19.9512H146.664C143.97 19.9512 142.756 18.56 142.756 15.1856C142.756 11.8112 143.97 10.3904 146.664 10.3904H153.264V16.1624C153.264 18.8264 152.288 19.9512 149.772 19.9512ZM166.031 7.3712C162.124 7.3712 160.585 9.5616 160.585 12.5216V17.8496C160.585 20.8096 162.124 23 166.031 23H175.592V19.9512H166.031C164.315 19.9512 163.634 19.0336 163.634 17.7904V16.6656H171.063C174.911 16.6656 176.362 15.0376 176.362 12.1664C176.362 9.1472 174.793 7.3712 171.093 7.3712H166.031ZM163.634 12.5512C163.634 11.3376 164.315 10.3904 166.031 10.3904H171.063C172.603 10.3904 173.283 11.16 173.283 12.344C173.283 13.4984 172.662 14.2088 170.975 14.2088H163.634V12.5512Z" fill="#F4F4F4"/>
+                        <path d="M88.9881 12.1072V15.1264H99.5553V12.1072H88.9881Z" fill="#00E991"/>
+                    </svg>
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li><a href="">Обо мне</a></li>
+                        <li><a href="">Сертификаты</a></li>
+                        <li><a href="">Мои работы</a></li>
+                        <li><a href="">Мои работы</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                </nav>
+                <a class="header__phone" href="">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.65447 1.32829C3.59544 1.25236 3.52092 1.18985 3.43587 1.14492C3.35082 1.09999 3.25719 1.07368 3.16119 1.06772C3.06519 1.06176 2.96902 1.07629 2.87907 1.11036C2.78912 1.14442 2.70744 1.19724 2.63947 1.26529L1.60547 2.30029C1.12247 2.78429 0.944471 3.4693 1.15547 4.0703C2.03121 6.55788 3.45577 8.81639 5.32347 10.6783C7.1854 12.546 9.4439 13.9705 11.9315 14.8463C12.5325 15.0573 13.2175 14.8793 13.7015 14.3963L14.7355 13.3623C14.8035 13.2943 14.8563 13.2127 14.8904 13.1227C14.9245 13.0327 14.939 12.9366 14.933 12.8406C14.9271 12.7446 14.9008 12.6509 14.8558 12.5659C14.8109 12.4808 14.7484 12.4063 14.6725 12.3473L12.3655 10.5533C12.2843 10.4904 12.19 10.4467 12.0895 10.4256C11.989 10.4044 11.8851 10.4064 11.7855 10.4313L9.59547 10.9783C9.30315 11.0514 8.99689 11.0475 8.70652 10.967C8.41614 10.8866 8.15154 10.7324 7.93847 10.5193L5.48247 8.06229C5.26924 7.84933 5.1148 7.58478 5.03418 7.29439C4.95357 7.00401 4.94954 6.6977 5.02247 6.4053L5.57047 4.2153C5.59538 4.11569 5.59734 4.01173 5.57621 3.91126C5.55507 3.81079 5.51139 3.71642 5.44847 3.63529L3.65447 1.32829ZM1.88447 0.511295C2.05947 0.336244 2.2697 0.200425 2.50121 0.112856C2.73272 0.0252871 2.98021 -0.0120282 3.22725 0.00338804C3.47429 0.0188043 3.71522 0.0865995 3.93405 0.202272C4.15288 0.317944 4.3446 0.478847 4.49647 0.674295L6.29047 2.98029C6.61947 3.40329 6.73547 3.9543 6.60547 4.4743L6.05847 6.6643C6.03019 6.77772 6.03172 6.89654 6.06291 7.0092C6.0941 7.12187 6.15389 7.22456 6.23647 7.3073L8.69347 9.76429C8.77631 9.84705 8.87916 9.90694 8.99202 9.93813C9.10488 9.96933 9.22389 9.97076 9.33747 9.9423L11.5265 9.3953C11.7831 9.33113 12.0509 9.32615 12.3098 9.38072C12.5686 9.43529 12.8116 9.54799 13.0205 9.71029L15.3265 11.5043C16.1555 12.1493 16.2315 13.3743 15.4895 14.1153L14.4555 15.1493C13.7155 15.8893 12.6095 16.2143 11.5785 15.8513C8.93965 14.9228 6.54374 13.4121 4.56847 11.4313C2.58776 9.45631 1.07708 7.06075 0.148471 4.4223C-0.213529 3.3923 0.111471 2.28529 0.851471 1.54529L1.88547 0.511295H1.88447Z" fill="#F4F4F4"/>
+                    </svg>
+                    <span class="mobile-hidden">+7 (937) 321 72 99</span>
+                </a>
+            </div>
+        </div>
+    </header>
+</body>
+
+<!-- <body>
+    <header>
+        <nav class="header-nav">
+            <input type="checkbox" id="btn-menu-checkbox">
+            <label for="btn-menu-checkbox" class="header-nav__menu-button">
+                <span class="line-menu-button"></span>
+                <span class="line-menu-button"></span>
+                <span class="line-menu-button"></span>
+            </label>
+            <span class="header-nav__logo logotipe" ></span>
+            <ul class="nav-menu menu">
+                <li onclick = "menuItemClick()"><a href="#section-about-me">Обо мне</a></li>
+                <li onclick = "menuItemClick()"><a href="#section-certificates">Сертификаты</a></li>
+                <li onclick = "menuItemClick()"><a href="#section-my-works">Мои работы</a></li>
+                <li onclick = "menuItemClick()"><a href="#section-contacts">Контакты</a></li>
+            </ul>
+            <a class="header-nav--telephone telephone" href="tel:89373217299">
+                <span class="header-nav--telephone-icon telephone-icon"></span>
+                <span class="header-nav--telephone-number telephone-number">+7 (937) 321 72 99</span>    
+            </a>
+        </nav>        
+    </header>
+    <main>
+        <section class="main-section">
+            <div class="section-container">
+                <div class="main-section--titles-container">
+                    <p>frontend-разработчик</p>
+                    <h1>Рене<br>Линарес</h1>
+                </div>
+                <div class="main-section--background-img"></div>
+                <a href="#section-about-me" class="main-section--arrows-down-button">
+                    <span class="main-section--arrow-down"></span>
+                    <span class="main-section--arrow-down"></span>
+                    <span class="main-section--arrow-down"></span>
+                </a>    
+            </div>
+        </section>
+        <section id="section-about-me" class="section-about-me">
+            <div class="section-container">
+                <div class="white-section--title-container title-container">
+                    <span></span>
+                    <h2>Обо мне</h2>
+                </div>
+                <article class="white-section-article section-article">
+                    <div>
+                        <p>
+                            Я - кубинский Frontend разработчик. Уже несколько лет живу в России, поэтому очень хорошо говорю по-русский.
+                            Я люблю решать задачи путем написания кода и наслаждаюсь результатом его выполнения. Мне нравится учиться и приобретать новые навыки, поэтому я всегда развиваюсь и стараюсь узнать, как можно больше.
+                        </p>
+                        <ul>
+                            <li>Хорошо владею HTML5, CSS3, JavaScript и умею работать с фреймворком Vue.js. Эти навыки позволили мне набрать опыт в разработке Landing Pages, Web Apps и в том числе SPA.</li>
+                            <li>Обладаю навыками кросс-браузерной и адаптивной верстки, анимации с CSS, в том числе методологии БЭМ. EcmaScript, TypeScript, Webpack и ООП с JavaScript.</li>
+                            <li>Имею опыт в разработке веб-приложений используя асинхронный код и REST API для связи с Backend.</li>
+                            <li>Работаю с терминалом и использую систему контроля версиями Git в каждом своём проекте.</li>
+                        </ul>
+                    </div>
+                    <div class="section-about-me--article-img-container article-content">
+                        <img src="./assets/images/about-me-img.png" alt="Картинка Рене Линареса">
+                    </div>    
+                </article>
+            </div>
+        </section>
+        <section id="section-certificates" class="section-certificates">
+            <div class="section-container">
+                <div class="black-section--title-container title-container">
+                    <span></span>
+                    <h2>Сертификаты</h2>
+                </div>
+                <article class="black-section-article section-article">
+                    <div>
+                        <p>
+                            Я стараюсь постоянно совершенствоваться, в чем вы можете убедиться, посмотрев на мои сертификаты. Большинство курсов и сертификатов я получил на популярной латиноамериканской платформе  <a href="https://platzi.com">Platzi</a>.
+                        </p>
+                    </div>
+                    <div class="carousel article-content" data-flickity='{ "freeScroll": true, "prevNextButtons": true, "pageDots": false, "contain": true }'>
+                    </div>
+
+                    <div id="popup-window" class="popup-certificate">
+                        <span id="counter" class="counter">1/10</span>
+                        <span id="closeButton" class="close"></span>
+                        <img id="popup-img" src="" alt="Certificate">
+                        <p id="certificate-description"></p>
+                        <div class="popup--button-container">
+                            <button class="button-prev" id="buttonPrev"></button>
+                            <button class="button-next" id="buttonNext"></button>    
+                        </div>
+                    </div>    
+                </article>
+            </div>
+        </section>
+        <section id="section-my-works" class="section-my-works">
+            <div class="section-container">
+                <div class="black-section--title-container title-container">
+                    <span></span>
+                    <h2>Мои работы</h2>
+                </div>
+                <div>
+                    <article class="black-section-article section-article">
+                        <div>
+                            <h3>
+                                Страница для компании по обмену криптовалют
+                            </h3>
+                            <p>
+                                -Дизайн подготовлен в Figma (дизайнер)<br>
+                                -Верстка макетов с адаптацями Mobile First для мобильной версии, планшета и десктопа.<br>
+                                -Создание программы для отображения актуальных данных по криптовалютам используя API REST.
+                            </p>
+                        </div>
+                        <div class="article-content article-content--left">
+                            <a class="first-work" href="https://renlin-code.github.io/batabit-landing-page/">
+                                <span class="first-work--logo"></span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="black-section-article section-article">
+                        <div>
+                            <h3>
+                                Страница для веб-разработчика
+                            </h3>
+                            <p>
+                                -Дизайн подготовлен в Figma (дизайнер)<br>
+                                -Верстка макетов с адаптацями Mobile First для мобильной версии, планшета и десктопа.
+                            </p>
+                        </div>
+                        <div class="article-content article-content--right">
+                            <a class="second-work" href="">
+                                <span class="second-work--logo"></span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="black-section-article section-article">
+                        <div>
+                            <h3>
+                                SPA - настольная игра "Spyfall"
+                            </h3>
+                            <p>
+                                -Дизайн подготовлен в Figma (дизайнер)<br>
+                                -Верстка макетов для мобильной версии.<br>
+                                -Написание программы в Vanilla JavaScript для реактивности приложения.<br>
+                                -Написание программы в Vanilla JavaScript в соответствии с логикой игры.
+                            </p>
+                        </div>
+                        <div class="article-content article-content--left">
+                            <a class="third-work" href="https://renlin-code-spyfall.netlify.app/">
+                                <span class="third-work--logo"></span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="black-section-article section-article">
+                        <div>
+                            <h3>
+                                Веб-приложения для просмотра фотографий котят
+                            </h3>
+                            <p>
+                                -Верстка макетов для мобильной версии.<br>
+                                -Написание программы в Vanilla JavaScript для реактивности приложения.<br>
+                                -Написание программы в Vanilla JavaScript для использования данных из API REST и работы с ними.
+                            </p>
+                        </div>
+                        <div class="article-content article-content--right">
+                            <a class="fourth-work" href="https://renlin-code-the-cat-project.netlify.app/">
+                                <span class="fourth-work--logo"></span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="black-section-article section-article">
+                        <div>
+                            <h3>
+                                Веб-приложение для контроля доходов и расходов
+                            </h3>
+                            <p>
+                                -Дизайн подготовлен в Figma (дизайнер)<br>
+                                -Верстка макетов для мобильной версии используя принципы компонентов в Vue.<br>
+                                -Создание программ в Vue в соответствии с логикой приложения.<br>
+                                -Создание реактивного графика для отображения данных.<br>
+                                -Работа с Options API или Composition API в зависимости от сложности компонента.
+                            </p>
+                        </div>
+                        <div class="article-content article-content--left">
+                            <a class="fiveth-work" href="https://renlin-code-cashflow.netlify.app/">
+                                <span class="fiveth-work--logo"></span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="section-contacts" class="section-contacts">
+            <div class="section-container">
+                <div class="black-section--title-container title-container">
+                    <span></span>
+                    <h2>Контакты</h2>
+                </div>
+                <div class="contacts-container">
+                    <ul class="contacts-container--left">
+                        <li><a href="mailto:renelj1997@gmail.com">Почта</a></li>
+                        <li><a href="https://wa.me/+79373217299">Whatsapp</a></li>
+                        <li><a href="https://t.me/rene_linares">Telegram</a></li>
+                    </ul>
+                    <div class="contacts-container--right">
+                        <a class="contacts-container--right--telephone" href="tel:+79373217299">
+                            <span class="contacts-container--right--telephone-icon"></span>
+                            <span class="contacts-container--right--telephone-number">+7 (937) 321 72 99</span>    
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="section-container">
+            <div class="logotipe"></div>
+            <div class="footer-flex-container">
+                <ul class="footer-menu">
+                    <li onclick = "menuItemClick()"><a href="#section-about-me">Обо мне</a></li>
+                    <li onclick = "menuItemClick()"><a href="#section-certificates">Сертификаты</a></li>
+                    <li onclick = "menuItemClick()"><a href="#section-my-works">Мои работы</a></li>
+                    <li onclick = "menuItemClick()"><a href="#section-contacts">Контакты</a></li>
+                </ul>
+                <div>
+                    <a class="footer-bar--telephone telephone" href="tel:89373217299">
+                        <span class="footer-bar--telephone-icon telephone-icon"></span>
+                        <span class="footer-bar--telephone-number telephone-number">+7 (937) 321 72 99</span>    
+                    </a>
+                </div>    
+            </div>
+            <div class="github">
+                <span>Я в GitHub: </span>
+                <a href="https://github.com/renlin-code">renlin-code</a>
+            </div>        
+        </div>
+    </footer>
+</body> -->
+</html>

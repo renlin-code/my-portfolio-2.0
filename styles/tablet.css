@@ -1,0 +1,84 @@
+nav .nav-menu {
+    width: 100%;
+    max-width: 400px;
+    padding: 0;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    position: static;
+    box-shadow: none;
+}
+nav .nav-menu li {
+    width: auto;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+header .header-nav .header-nav--telephone-number {
+    display: inline;
+}
+header .header-nav .header-nav--menu-button {
+    display: none;
+}
+.main-section {
+    height: calc(100vh - 70px);
+}
+.main-section--titles-container {
+    padding-top: 80px;
+}
+.main-section--titles-container p {
+    font-size: 2.0rem;
+    line-height: 2.2rem;
+}
+.main-section--titles-container h1 {
+    margin-top: 18px;
+    font-size:9.6rem;
+    line-height: 12rem;
+}
+.main-section--background-img {
+    width: 600px;
+    height: 580px;
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    transform: translate(-100%);
+}
+.section-article {
+    flex-direction: row;
+}
+.section-article .section-about-me--article-img-container {
+    order: -1;
+    margin-right: 20px;
+}
+.section-article {
+    flex-direction: row;
+}
+.section-certificates .black-section-article .carousel {
+    margin-left: 20px;   
+}
+  .flickity-prev-next-button {
+    display: block;
+  }  
+  
+.section-certificates .popup-certificate img {
+    width: 95%;
+    max-width: 600px;
+}
+
+.section-my-works .section-article .article-content--left {
+    order: -1;
+    margin-right: 20px;
+}
+.section-my-works .section-article .article-content--right {
+    order: 0;
+    margin-left: 20px;
+}
+.carousel .carousel-cell:hover {
+    background-blend-mode: soft-light;
+    cursor: url("../assets/icons/loupe.cur"), default;
+}
+a:hover,
+button:hover {
+    opacity: 0.6;
+}

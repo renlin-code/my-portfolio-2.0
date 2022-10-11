@@ -1,0 +1,172 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+html .body_fixed {
+  position: fixed;
+}
+
+body::-webkit-scrollbar {
+  width: 8rem;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+}
+
+h1, .renlincode-big-title {
+  font-size: 96rem;
+  line-height: 120rem;
+}
+h2, .renlincode-title {
+  font-size: 30rem;
+  line-height: 41.5rem;
+}
+h3, h4, h5, h6 .renlincode-subtitle {
+  font-size: 20rem;
+  line-height: 26rem;
+}
+.renlincode-text {
+  font-size: 14rem;
+  line-height: 20rem;
+}
+header {
+  position: relative;
+  background-color: #F4F4F4;
+  z-index: 2;
+}
+
+body {
+  color: #151F28;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14rem;
+  line-height: 20rem;
+  overflow-x: hidden;
+}
+.header-content-wrapper {
+  width: 1100rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 650px) {
+  .header-content-wrapper {
+    width: 100%;
+    padding: 0 30rem;
+  }
+}
+
+.main-content-wrapper {
+  width: 930rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 650px) {
+  .main-content-wrapper {
+    width: 100%;
+    padding: 0 30rem;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .desktop-hidden {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+}
+
+.header {
+  background: #151F28;
+}
+.header__content {
+  height: 70rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo svg {
+  width: 177rem;
+  height: 23rem;
+}
+.header__nav-list {
+  display: flex;
+  gap: 30rem;
+}
+.header__nav-list a {
+  color: #F4F4F4;
+}
+.header__phone {
+  display: flex;
+  align-items: center;
+  gap: 14rem;
+}
+.header__phone svg {
+  width: 20rem;
+  height: 20rem;
+}
+.header__phone span {
+  color: #F4F4F4;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,135 @@
+@import "./reset";
+@import "./vars";
+
+html {
+    font-family: "Open Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+html .body_fixed {
+    position: fixed;
+}
+body::-webkit-scrollbar {
+    width: 8rem;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+}
+
+
+
+//TEXT STYLES
+h1, .renlincode-big-title {
+    font-size: 96rem;
+    line-height: 120rem;
+    @media only screen and (max-width: 650px) {
+    }    
+}
+h2, .renlincode-title {
+    font-size: 30rem;
+    line-height: 41.5rem;
+    @media only screen and (max-width: 650px) {
+    }    
+}
+h3, h4, h5, h6 .renlincode-subtitle {
+    font-size: 20rem;
+    line-height: 26rem;
+    @media only screen and (max-width: 650px) {
+    }    
+}
+.renlincode-text {
+    font-size: 14rem;
+    line-height: 20rem;
+    @media only screen and (max-width: 650px) {
+    }    
+}
+
+
+//GLOBAL STYLES
+header {
+    position: relative;
+    background-color: $white;
+    z-index: 2;
+}
+body {
+    color: $black;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14rem;
+    line-height: 20rem;
+    overflow-x: hidden;
+    @media only screen and (max-width: 650px) {
+    }    
+}
+
+
+//LAYOUT
+.header-content-wrapper {
+    width: 1100rem;
+    margin: 0 auto;
+    @media only screen and (max-width: 650px) {
+        width: 100%;
+        padding: 0 30rem;
+    }
+}
+.main-content-wrapper {
+    width: 930rem;
+    margin: 0 auto;
+    @media only screen and (max-width: 650px) {
+        width: 100%;
+        padding: 0 30rem;
+    }
+}
+
+//VISIBILITY
+
+.desktop-hidden {
+    @media only screen and (min-width: 650px) {
+        display: none !important;
+    }
+}
+.mobile-hidden {
+    @media only screen and (max-width: 650px) {
+        display: none !important;
+    }
+}
+
+
+//BLOCKS
+
+.header {
+    background: $black;
+    &__content {
+        height: 70rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        svg {
+            width: 177rem;
+            height: 23rem;
+        }
+    }
+    &__nav {
+        &-list {
+            display: flex;
+            gap: 30rem;
+            a {
+                color: $white;
+            }
+        }
+    }
+    &__phone {
+        display: flex;
+        align-items: center;
+        gap: 14rem;
+        svg {
+            width: 20rem;
+            height: 20rem;
+        }
+        span {
+            color: $white;
+        }
+    }
+}
