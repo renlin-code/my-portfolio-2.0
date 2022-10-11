@@ -20,28 +20,34 @@ body::-webkit-scrollbar-thumb {
 
 //TEXT STYLES
 h1, .renlincode-big-title {
+    font-family: "Russo One", sans-serif;
     font-size: 96rem;
     line-height: 120rem;
+    font-weight: 600;
     @media only screen and (max-width: 650px) {
+        font-size: 60rem;
+        line-height: 62rem;
     }    
 }
 h2, .renlincode-title {
+    font-family: "Russo One", sans-serif;
     font-size: 30rem;
     line-height: 41.5rem;
-    @media only screen and (max-width: 650px) {
-    }    
+    font-weight: 600;
 }
 h3, h4, h5, h6 .renlincode-subtitle {
+    font-family: "Russo One", sans-serif;
     font-size: 20rem;
     line-height: 26rem;
+    font-weight: 600;
     @media only screen and (max-width: 650px) {
+        font-size: 14rem;
+        line-height: 16rem;
     }    
 }
 .renlincode-text {
     font-size: 14rem;
     line-height: 20rem;
-    @media only screen and (max-width: 650px) {
-    }    
 }
 
 
@@ -68,7 +74,7 @@ body {
     margin: 0 auto;
     @media only screen and (max-width: 650px) {
         width: 100%;
-        padding: 0 30rem;
+        padding: 0 15rem;
     }
 }
 .main-content-wrapper {
@@ -76,7 +82,7 @@ body {
     margin: 0 auto;
     @media only screen and (max-width: 650px) {
         width: 100%;
-        padding: 0 30rem;
+        padding: 0 15rem;
     }
 }
 
@@ -97,6 +103,7 @@ body {
 //BLOCKS
 
 .header {
+    position: relative;
     background: $black;
     &__content {
         height: 70rem;
@@ -105,19 +112,88 @@ body {
         justify-content: space-between;
         align-items: center;
     }
+    &__burger {
+        width: 28rem;
+        height: 20rem;
+        position: relative;
+        cursor: pointer;
+        &-line {
+            width: 28rem;
+            height: 2rem;
+            border-radius: 1rem;
+            transition: all 0.4s ease;
+            position: absolute;
+            display: block;
+            background: $white;
+            &:nth-child(1) {
+                top: 1rem;
+            }    
+            &:nth-child(2) {
+                top: calc(50% - 0.5rem);
+            }    
+            &:nth-child(3) {
+                top: calc(100% - 1rem);
+            }    
+        }
+    }
+    #burger-checkbox {
+        display: none;
+        &:checked ~ .header__burger .header__burger-line {
+            &:nth-child(1) {
+                transform: rotate(140deg);
+                top: 10rem;
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: rotate(-140deg);
+                top: 10rem;
+            }
+        }
+    }
+    
     &__logo {
         svg {
             width: 177rem;
             height: 23rem;
+            @media only screen and (max-width: 650px) {
+                width: 150rem;
+                height: 20rem;
+            }
         }
     }
     &__nav {
+        @media only screen and (max-width: 650px) {
+            display: grid;
+            place-content: center;
+            position: absolute;
+            top: 70rem;
+            left: -100%;
+            background: $black;
+            width: 100%;
+            height: calc(100vh - 70rem);
+            transition: transform 300ms ease-in-out;
+        }
         &-list {
             display: flex;
             gap: 30rem;
+            @media only screen and (max-width: 650px) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 20rem;
+                line-height: 22rem;
+                font-weight: 600;
+            }
             a {
                 color: $white;
             }
+        }
+        &--open {
+            @media only screen and (max-width: 650px) {
+                transform: translateX(100%);
+            } 
         }
     }
     &__phone {
@@ -130,6 +206,86 @@ body {
         }
         span {
             color: $white;
+        }
+    }
+}
+
+.hero {
+    background: $black;
+    height: 565rem;
+    position: relative;
+    @media only screen and (max-width: 650px) {
+        height: 500rem;
+    }
+    &__subtitle {
+        color: $white;
+        padding: 80rem 0 18rem;
+        @media only screen and (max-width: 650px) {
+            padding-top: 20rem;
+        }
+    }
+    &__title {
+        color: $white;
+        width: 430rem;
+        @media only screen and (max-width: 650px) {
+            width: 100%;
+        }
+    }
+    &__img {
+        width: 630rem;
+        height: 600rem;
+        object-fit: contain;
+        position: absolute;
+        bottom: 0;
+        right: 70rem;
+        @media only screen and (max-width: 650px) {
+            width: 100%;
+            height: auto;
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+    &__arrows {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 20rem;
+        left: 50%;
+        transform: translate(-50%);
+        svg {
+            width: 20rem;
+            height: 10rem;
+            animation: arrows 1.5s linear infinite;
+            opacity: 0;
+            &:nth-child(1) {
+                animation-delay: -0.4s;
+            }      
+            &:nth-child(2) {
+                animation-delay: -0.2s;
+            }      
+            &:nth-child(3) {
+                animation-delay: 0;
+            }      
+        }
+        @keyframes arrows
+        {
+            0%
+            {   
+                transform: translateY(-5rem);
+                opacity: 0;
+            }
+            25%
+            {   
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50%, 100%
+            {
+                transform: translateY(5rem);
+                opacity: 0;
+            }
         }
     }
 }
