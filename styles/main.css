@@ -15,15 +15,10 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
   text-size-adjust: none;
   text-decoration: none;
   scroll-behavior: smooth;
-  list-style: none;
 }
 
 footer, header, nav, section, main {
   display: block;
-}
-
-ol, ul {
-  list-style: none;
 }
 
 blockquote, q {
@@ -230,6 +225,7 @@ body {
   }
 }
 .header__nav-list {
+  list-style: none;
   display: flex;
   gap: 30rem;
 }
@@ -346,6 +342,55 @@ body {
     transform: translateY(5rem);
     opacity: 0;
   }
+}
+
+.about-me {
+  background: #F4F4F4;
+  padding-top: 40rem;
+}
+.about-me__title {
+  color: #151F28;
+  padding-left: 60rem;
+  margin-bottom: 40rem;
+  position: relative;
+}
+.about-me__title::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2rem);
+  left: 0;
+  width: 50rem;
+  height: 4rem;
+  border-radius: 2rem;
+  background: #151F28;
+}
+.about-me__wrapper {
+  display: grid;
+  grid-template-columns: 320rem auto;
+  column-gap: 20rem;
+}
+@media only screen and (max-width: 650px) {
+  .about-me__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+}
+.about-me__wrapper img {
+  width: 100%;
+  object-fit: contain;
+}
+.about-me__right {
+  padding-bottom: 20rem;
+}
+.about-me__right-text {
+  margin-bottom: 20rem;
+}
+.about-me__right-list {
+  list-style: inside;
+}
+.about-me__right-list li {
+  margin-bottom: 6rem;
 }
 
 /*# sourceMappingURL=main.css.map */

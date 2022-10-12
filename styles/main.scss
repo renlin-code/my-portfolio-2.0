@@ -176,6 +176,7 @@ body {
             transition: transform 300ms ease-in-out;
         }
         &-list {
+            list-style: none;
             display: flex;
             gap: 30rem;
             @media only screen and (max-width: 650px) {
@@ -285,6 +286,53 @@ body {
             {
                 transform: translateY(5rem);
                 opacity: 0;
+            }
+        }
+    }
+}
+
+.about-me {
+    background: $white;
+    padding-top: 40rem;
+    &__title {
+        color: $black;
+        padding-left: 60rem;
+        margin-bottom: 40rem;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: calc(50% - 2rem);
+            left: 0;
+            width: 50rem;
+            height: 4rem;
+            border-radius: 2rem;
+            background: $black;
+        }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 320rem auto;
+        column-gap: 20rem;
+        @media only screen and (max-width: 650px) {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 0;
+        }
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    &__right {
+        padding-bottom: 20rem;
+        &-text {
+            margin-bottom: 20rem;
+        }
+        &-list {
+            list-style: inside;
+            li {
+                margin-bottom: 6rem;
             }
         }
     }
