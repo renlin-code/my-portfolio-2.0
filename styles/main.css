@@ -105,6 +105,10 @@ h3, h4, h5, h6 .renlincode-subtitle {
   line-height: 20rem;
 }
 
+.renlincode-link {
+  color: #00E991;
+}
+
 header {
   position: relative;
   background-color: #F4F4F4;
@@ -391,6 +395,150 @@ body {
 }
 .about-me__right-list li {
   margin-bottom: 6rem;
+}
+
+.certificates {
+  background: #151F28;
+  padding: 40rem 0 45rem;
+}
+@media only screen and (max-width: 650px) {
+  .certificates {
+    padding-bottom: 25rem;
+  }
+}
+.certificates__content {
+  width: 930rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 650px) {
+  .certificates__content {
+    width: 100%;
+  }
+}
+.certificates__title {
+  color: #F4F4F4;
+  padding-left: 60rem;
+  position: relative;
+}
+.certificates__title::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2rem);
+  left: 0;
+  width: 50rem;
+  height: 4rem;
+  border-radius: 2rem;
+  background: #F4F4F4;
+}
+@media only screen and (max-width: 650px) {
+  .certificates__title::before {
+    left: 15rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .certificates__title {
+    padding: 0 15rem 0 75rem;
+    margin-bottom: 40rem;
+  }
+}
+.certificates__wrapper {
+  display: grid;
+  grid-template-columns: 362rem 500rem;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 650px) {
+  .certificates__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.certificates__text {
+  color: #F4F4F4;
+}
+@media only screen and (max-width: 650px) {
+  .certificates__text {
+    padding: 0 15rem;
+  }
+}
+.certificates__slider {
+  width: 500rem;
+  height: 352rem;
+  overflow: hidden;
+  padding: 60rem 0;
+}
+@media only screen and (max-width: 650px) {
+  .certificates__slider {
+    width: 100%;
+    height: 327rem;
+  }
+}
+.certificates__slider-slide {
+  position: relative;
+  width: 300rem;
+  height: 232rem;
+  margin: 0 200rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 4rem 8rem 50rem rgba(0, 0, 0, 0.81);
+  transition: all 300ms ease-in-out;
+  cursor: url("/assets/icons/loupe.cur"), auto;
+}
+@media only screen and (max-width: 650px) {
+  .certificates__slider-slide {
+    width: 260rem;
+    height: 207rem;
+  }
+}
+.certificates__slider-slide:hover {
+  box-shadow: 0 0rem 50rem #00E991;
+}
+.certificates__slider-slide:hover .front-layer {
+  background: rgba(15, 27, 31, 0.7);
+}
+.certificates__slider-slide .front-layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 300ms ease-in-out;
+}
+.certificates__slider-slide img {
+  width: 100%;
+  object-fit: contain;
+}
+.certificates__slider .flickity-viewport {
+  overflow: visible;
+  cursor: default !important;
+}
+.certificates__slider .flickity-prev-next-button {
+  width: 26rem;
+  height: 26rem;
+  background: #3E3E3E;
+  color: #F4F4F4;
+  transform: none;
+  transition: all 300ms ease-in-out;
+}
+.certificates__slider .flickity-prev-next-button:hover {
+  background: #F4F4F4;
+  color: #3E3E3E;
+}
+@media only screen and (max-width: 650px) {
+  .certificates__slider .flickity-prev-next-button {
+    bottom: 10rem;
+    top: unset;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .certificates__slider .flickity-prev-next-button.previous {
+    left: 120rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .certificates__slider .flickity-prev-next-button.next {
+    right: 120rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
