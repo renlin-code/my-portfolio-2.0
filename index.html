@@ -130,6 +130,30 @@
                     </div>
                 </div>
             </div>
+
+            <div class="modal-certificates">
+                <span id="counter" class="modal-certificates__counter renlincode-subtitle"></span>
+                <div id="close-button" class="modal-certificates__close">
+                    <svg viewBox="0 0 299 299" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.34441 8.34441C13.6889 3.00149 20.9367 0 28.4939 0C36.0511 0 43.2989 3.00149 48.6434 8.34441L149.419 109.12L250.195 8.34441C255.571 3.15291 262.77 0.280268 270.242 0.345203C277.715 0.410138 284.863 3.40745 290.147 8.69158C295.431 13.9757 298.429 21.1239 298.494 28.5965C298.559 36.0691 295.686 43.2683 290.494 48.6434L189.718 149.419L290.494 250.195C295.686 255.571 298.559 262.77 298.494 270.242C298.429 277.715 295.431 284.863 290.147 290.147C284.863 295.431 277.715 298.429 270.242 298.494C262.77 298.559 255.571 295.686 250.195 290.494L149.419 189.718L48.6434 290.494C43.2683 295.686 36.0691 298.559 28.5965 298.494C21.1239 298.429 13.9757 295.431 8.69158 290.147C3.40745 284.863 0.410138 277.715 0.345203 270.242C0.280268 262.77 3.15291 255.571 8.34441 250.195L109.12 149.419L8.34441 48.6434C3.00149 43.2989 0 36.0511 0 28.4939C0 20.9367 3.00149 13.6889 8.34441 8.34441V8.34441Z" fill="#F4F4F4"/>
+                    </svg>
+                </div>
+                <img id="modal-img" src="" alt="Certificate">
+                <p class="modal-certificates__description renlincode-subtitle" id="modal-description"></p>
+                <div class="modal-certificates__buttons-container">
+                    <button class="prev-buton" id="prev-button">
+                        <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.2625 7.5L10.7625 15L18.2625 22.5L20.025 20.7375L14.3 15L20.025 9.2625L18.2625 7.5Z" fill="#F4F4F4"/>
+                        </svg>    
+                    </button>
+                    <button class="next-buton" id="next-button">
+                        <svg width="30rem" height="30rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.525 22.5L20.025 15L12.525 7.5L10.7625 9.2625L16.4875 15L10.7625 20.7375L12.525 22.5Z" fill="#F4F4F4"/>
+                        </svg>
+                    </button>    
+                </div>
+            </div>    
+
         </section>
     </main>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
@@ -192,17 +216,6 @@
                     </div>
                     <div class="carousel article-content" data-flickity='{ "freeScroll": true, "prevNextButtons": true, "pageDots": false, "contain": true }'>
                     </div>
-
-                    <div id="popup-window" class="popup-certificate">
-                        <span id="counter" class="counter">1/10</span>
-                        <span id="closeButton" class="close"></span>
-                        <img id="popup-img" src="" alt="Certificate">
-                        <p id="certificate-description"></p>
-                        <div class="popup--button-container">
-                            <button class="button-prev" id="buttonPrev"></button>
-                            <button class="button-next" id="buttonNext"></button>    
-                        </div>
-                    </div>    
                 </article>
             </div>
         </section>

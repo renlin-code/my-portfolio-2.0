@@ -87,14 +87,14 @@ h2, .renlincode-title {
   font-weight: 600;
 }
 
-h3, h4, h5, h6 .renlincode-subtitle {
+h3, h4, h5, h6, .renlincode-subtitle {
   font-family: "Russo One", sans-serif;
   font-size: 20rem;
   line-height: 26rem;
   font-weight: 600;
 }
 @media only screen and (max-width: 650px) {
-  h3, h4, h5, h6 .renlincode-subtitle {
+  h3, h4, h5, h6, .renlincode-subtitle {
     font-size: 14rem;
     line-height: 16rem;
   }
@@ -122,6 +122,10 @@ body {
   line-height: 20rem;
   overflow-x: hidden;
 }
+.onhover-light:hover {
+  box-shadow: 0 0rem 50rem #00E991;
+}
+
 .header-content-wrapper {
   width: 1100rem;
   margin: 0 auto;
@@ -495,9 +499,6 @@ body {
     height: 200rem;
   }
 }
-.certificates__slider-slide:hover {
-  box-shadow: 0 0rem 50rem #00E991;
-}
 .certificates__slider-slide:hover .front-layer {
   background: rgba(15, 27, 31, 0.7);
 }
@@ -544,6 +545,111 @@ body {
   .certificates__slider .flickity-prev-next-button.next {
     right: 120rem;
   }
+}
+.certificates .modal-certificates {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+  display: grid;
+  transform: scale(0);
+  transition: transform 300ms ease-in-out;
+}
+.certificates .modal-certificates__counter {
+  color: #F4F4F4;
+  font-family: "Open Sans", sans-serif;
+  justify-self: center;
+  align-self: flex-end;
+}
+.certificates .modal-certificates__close {
+  cursor: pointer;
+  position: absolute;
+  top: 20rem;
+  right: 20rem;
+}
+.certificates .modal-certificates__close svg {
+  width: 16rem;
+  height: 16rem;
+}
+.certificates .modal-certificates img {
+  width: 560rem;
+  height: 436rem;
+  object-fit: contain;
+  display: block;
+  place-self: center;
+  box-shadow: 4rem 8rem 50rem rgba(0, 0, 0, 0.81);
+  background: radial-gradient(circle, #344C62 0%, #151F28 100%);
+}
+@media only screen and (max-width: 650px) {
+  .certificates .modal-certificates img {
+    width: calc(100% - 30rem);
+    height: 223rem;
+  }
+}
+.certificates .modal-certificates__buttons-container {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: calc(50% - 20rem);
+  left: calc(50% - 520rem);
+  width: 1040rem;
+}
+@media only screen and (max-width: 650px) {
+  .certificates .modal-certificates__buttons-container {
+    width: 140rem;
+    bottom: 20rem;
+    left: calc(50% - 70rem);
+  }
+}
+.certificates .modal-certificates__buttons-container button {
+  background: #3E3E3E;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  transition: all 300ms ease-in-out;
+}
+.certificates .modal-certificates__buttons-container button svg path {
+  transition: all 300ms ease-in-out;
+}
+.certificates .modal-certificates__buttons-container button:hover {
+  background: #F4F4F4;
+}
+.certificates .modal-certificates__buttons-container button:hover svg path {
+  fill: #3E3E3E;
+}
+.certificates .modal-certificates__buttons-container button svg {
+  width: 30rem;
+  height: 30rem;
+}
+.certificates .modal-certificates__buttons-container button.disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.certificates .modal-certificates__buttons-container button.disabled:hover {
+  background: #3e3e3e;
+}
+.certificates .modal-certificates__buttons-container button.disabled:hover svg path {
+  fill: #F4F4F4;
+}
+.certificates .modal-certificates__description {
+  color: #F4F4F4;
+  font-family: "Open Sans", sans-serif;
+  width: 1040rem;
+  margin: 0 auto;
+  text-align: center;
+}
+@media only screen and (max-width: 650px) {
+  .certificates .modal-certificates__description {
+    width: calc(100% - 30rem);
+  }
+}
+.certificates .modal-certificates--open {
+  transform: scale(1);
 }
 
 /*# sourceMappingURL=main.css.map */
