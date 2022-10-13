@@ -144,6 +144,10 @@ body {
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
 @media only screen and (min-width: 650px) {
   .desktop-hidden {
     display: none !important;
@@ -219,7 +223,7 @@ body {
   .header__nav {
     display: grid;
     place-content: center;
-    position: absolute;
+    position: fixed;
     top: 70rem;
     left: -100%;
     background: #151F28;
@@ -249,6 +253,7 @@ body {
 @media only screen and (max-width: 650px) {
   .header__nav--open {
     transform: translateX(100%);
+    overflow-y: scroll;
   }
 }
 .header__phone {
@@ -487,7 +492,7 @@ body {
 @media only screen and (max-width: 650px) {
   .certificates__slider-slide {
     width: 260rem;
-    height: 207rem;
+    height: 200rem;
   }
 }
 .certificates__slider-slide:hover {
@@ -506,7 +511,7 @@ body {
 }
 .certificates__slider-slide img {
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .certificates__slider .flickity-viewport {
   overflow: visible;
