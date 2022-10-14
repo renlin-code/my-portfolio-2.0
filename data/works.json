@@ -1,0 +1,73 @@
+[
+    {
+        "id": "0",
+        "title": "Страница для компании по обмену криптовалют",
+        "features": [
+            "Дизайн подготовлен в Figma (дизайнер)",
+            "Верстка макетов с адаптацями Mobile First для мобильной версии, планшета и десктопа.",
+            "Создание программы для отображения актуальных данных по криптовалютам используя API REST."
+        ],
+        "deployAddress": "https://renlin-code.github.io/batabit-landing-page/",
+        "repoAddress": "https://github.com/renlin-code/batabit-landing-page",
+        "backgroundUrl": "../assets/images/works/batabit.png"
+    },
+    {
+        "id": "1",
+        "title": "Страница для веб-разработчика",
+        "features": [
+            "Дизайн подготовлен в Figma (дизайнер)",
+            "Верстка макетов с адаптацями Mobile First для мобильной версии, планшета и десктопа."
+        ],
+        "deployAddress": "https://renlin-code.netlify.app/",
+        "repoAddress": "https://github.com/renlin-code/my-portfolio-2.0",
+        "backgroundUrl": "../assets/images/works/renlin-code.png"
+    },
+    {
+        "id": "2",
+        "title": "SPA - настольная игра Spyfall",
+        "features": [
+            "Дизайн подготовлен в Figma (дизайнер)",
+            "Верстка макетов для мобильной версии.",
+            "Верстка макетов с адаптацями Mobile First для мобильной версии, планшета и десктопа.",
+            "Верстка макетов с адаптацями Mobile First для мобильной версии, планшета и десктопа."
+        ],
+        "deployAddress": "https://renlin-code-spyfall-vue.netlify.app/#/",
+        "repoAddress": "https://github.com/renlin-code/spyfall_2.0",
+        "backgroundUrl": "../assets/images/works/spyfall.png"
+    },
+    {
+        "id": "3",
+        "title": "Веб-приложения с фотографями котят",
+        "features": [
+            "Верстка макетов для мобильной версии.",
+            "Написание программы в Vanilla JavaScript для реактивности приложения.",
+            "Написание программы в Vanilla JavaScript для использования данных из API REST и работы с ними."],
+        "deployAddress": "https://renlin-code-the-cat-project.netlify.app/",
+        "repoAddress": "https://github.com/renlin-code/the-cat-SPA",
+        "backgroundUrl": "../assets/images/works/the-cat.png"
+    },
+    {
+        "id": "4",
+        "title": "Веб-приложения для просмотра фотографий котят",
+        "features": [
+            "Верстка макетов для мобильной версии.",
+            "Написание программы в Vanilla JavaScript для реактивности приложения.",
+            "Написание программы в Vanilla JavaScript для использования данных из API REST и работы с ними."],
+        "deployAddress": "#",
+        "repoAddress": "https://github.com/renlin-code/time-master_nuxt",
+        "backgroundUrl": "../assets/images/works/timemaster.png"
+    },
+    {
+        "id": "5",
+        "title": "Веб-приложение для контроля доходов и расходов",
+        "features": [
+            "Верстка макетов для мобильной версии используя принципы компонентов в Vue.",
+            "Создание программ в Vue в соответствии с логикой приложения.",
+            "Создание реактивного графика для отображения данных.",
+            "Работа с Options API или Composition API в зависимости от сложности компонента."],
+        "deployAddress": "https://renlin-code-cashflow.netlify.app/",
+        "repoAddress": "https://github.com/renlin-code/cashflow",
+        "backgroundUrl": "../assets/images/works/cashflow.png"
+    }
+
+]

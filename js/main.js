@@ -1,3 +1,5 @@
+"use strict"
+
 //NAVIGATOR MENU
 const burgerDOM = document.querySelector("#burger-checkbox");
 const navMenuDOM = document.querySelector(".header__nav");
@@ -18,7 +20,7 @@ const menuItemClick = () => {
 
 //CERTIFICATES SLIDER
 const renderCertificates = async () => {
-  const url = "../certificates.json";
+  const url = "../data/certificates.json";
   const res = await fetch(url);
   const allCertificates = await res.json();
 
@@ -51,25 +53,25 @@ const renderCertificates = async () => {
     }
     checkArrowsStyle();
     
-    counterDOM.innerHTML = `${counter} / ${allCertificates.length}`;
+    counterDOM.innerText = `${counter} / ${allCertificates.length}`;
 
     imageDOM.src = allCertificates[index].url;
-    descriptionDOM.innerHTML = allCertificates[index].description;
+    descriptionDOM.innerText = allCertificates[index].description;
 
     prevDOM.addEventListener("click", () => {
       if (index > 0) {
-        counterDOM.innerHTML = "";
+        counterDOM.innerText = "";
         imageDOM.src = "";
-        descriptionDOM.innerHTML = "";
+        descriptionDOM.innerText = "";
 
         index--;
         counter--;
 
         checkArrowsStyle();
 
-        counterDOM.innerHTML = `${counter} / ${allCertificates.length}`;
+        counterDOM.innerText = `${counter} / ${allCertificates.length}`;
         imageDOM.src = allCertificates[index].url;
-        descriptionDOM.innerHTML = allCertificates[index].description;
+        descriptionDOM.innerText = allCertificates[index].description;
         
         flkty.previous();
       }
@@ -77,17 +79,17 @@ const renderCertificates = async () => {
 
     nextDOM.addEventListener("click", () => {
       if (index >= 0 && index < allCertificates.length - 1) {
-        counterDOM.innerHTML = "";
+        counterDOM.innerText = "";
         imageDOM.src = "";
-        descriptionDOM.innerHTML = ""; 
+        descriptionDOM.innerText = ""; 
         index++;
         counter++;
         
         checkArrowsStyle();
 
-        counterDOM.innerHTML = `${counter} / ${allCertificates.length}`;
+        counterDOM.innerText = `${counter} / ${allCertificates.length}`;
         imageDOM.src = allCertificates[index].url;
-        descriptionDOM.innerHTML = allCertificates[index].description;
+        descriptionDOM.innerText = allCertificates[index].description;
 
         flkty.next();
       }
@@ -103,7 +105,7 @@ const renderCertificates = async () => {
       modalDOM.classList.remove("modal-certificates--open")
       setTimeout(() => {
         imageDOM.src = "";
-        descriptionDOM.innerHTML = "";            
+        descriptionDOM.innerText = "";            
       }, 300)
     })
 
@@ -144,3 +146,56 @@ const renderCertificates = async () => {
 renderCertificates();
 
 
+
+// MY WORKS
+const renderWorks = async () => {
+  const url = "../data/works.json";
+  const res = await fetch(url);
+  const allWorks = await res.json();
+
+  const worksWrapperDOM = document.querySelector(".works__wrapper");
+  
+  allWorks.forEach(item => {
+    const workDOM = document.createElement("div");
+    const imgLinkDOM = document.createElement("a");
+    const infoDOM = document.createElement("div");
+    const titleDOM = document.createElement("h6");
+    const listDOM = document.createElement("ul");
+    const linkDOM = document.createElement("a");
+  
+    workDOM.classList.add("works__work");
+    const index = allWorks.indexOf(item);
+    if (index % 2 !== 0) workDOM.classList.add("reverse");
+    imgLinkDOM.classList.add("works__work-img-link","onhover-light");
+    infoDOM.classList.add("works__work-info");
+    titleDOM.classList.add("works__work-info-title");
+    listDOM.classList.add("works__work-info-list");
+    linkDOM.classList.add("works__work-info-link","renlincode-link");
+
+    imgLinkDOM.style.backgroundImage = `url(${item.backgroundUrl})`;
+    imgLinkDOM.href = item.deployAddress;
+    imgLinkDOM.target = "_blank";
+    imgLinkDOM.rel = "noopener noreferrer";
+    titleDOM.innerText = item.title;
+    linkDOM.href = item.repoAddress;
+    linkDOM.target = "_blank";
+    linkDOM.rel = "noopener noreferrer";
+    linkDOM.innerText = "Посмотреть репозиторий";
+
+    item.features.forEach(i => {
+      const listItemDOM = document.createElement("li");
+      listItemDOM.innerText = i;
+      listDOM.appendChild(listItemDOM);
+    })
+
+    infoDOM.appendChild(titleDOM);
+    infoDOM.appendChild(listDOM);
+    infoDOM.appendChild(linkDOM);
+    workDOM.appendChild(imgLinkDOM);
+    workDOM.appendChild(infoDOM);
+
+    worksWrapperDOM.appendChild(workDOM);
+  })
+}
+
+renderWorks();

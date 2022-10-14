@@ -13,7 +13,7 @@ body::-webkit-scrollbar {
     background-color: rgba(0, 0, 0, 0.4);
 }
 body::-webkit-scrollbar-thumb {
-    background-color: var(--secondary-color);
+    background-color: $secondary;
 }
 
 
@@ -41,18 +41,36 @@ h3, h4, h5, h6, .renlincode-subtitle {
     line-height: 26rem;
     font-weight: 600;
     @media only screen and (max-width: 650px) {
-        font-size: 14rem;
-        line-height: 16rem;
+        font-size: 16rem;
+        line-height: 22rem;
     }    
 }
 .renlincode-text {
     font-size: 14rem;
     line-height: 20rem;
 }
+
 .renlincode-link {
     color: $main;
 }
 
+.section-title {
+    font-family: "Russo One", sans-serif;
+    font-size: 30rem;
+    line-height: 41.5rem;
+    font-weight: 600;
+    padding-left: 60rem;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 2rem);
+        left: 0;
+        width: 50rem;
+        height: 4rem;
+        border-radius: 2rem;
+    }
+}
 //GLOBAL STYLES
 header {
     position: relative;
@@ -61,6 +79,7 @@ header {
 }
 body {
     color: $black;
+    background: $black;
     font-family: "Open Sans", sans-serif;
     font-size: 14rem;
     line-height: 20rem;
@@ -70,6 +89,7 @@ body {
 }
 
 .onhover-light {
+    transition: all 300ms ease-in-out;
     &:hover {
         box-shadow: 0 0rem 50rem $main;
     }
@@ -110,7 +130,6 @@ body {
 
 
 //BLOCKS
-
 .header {
     position: relative;
     background: $black;
@@ -306,17 +325,8 @@ body {
     padding-top: 40rem;
     &__title {
         color: $black;
-        padding-left: 60rem;
         margin-bottom: 40rem;
-        position: relative;
         &::before {
-            content: "";
-            position: absolute;
-            top: calc(50% - 2rem);
-            left: 0;
-            width: 50rem;
-            height: 4rem;
-            border-radius: 2rem;
             background: $black;
         }
     }
@@ -340,9 +350,9 @@ body {
             margin-bottom: 20rem;
         }
         &-list {
-            list-style: inside;
+            padding-left: 20rem;
             li {
-                margin-bottom: 6rem;
+                margin-bottom: 8rem;
             }
         }
     }
@@ -363,16 +373,7 @@ body {
     }
     &__title {
         color: $white;
-        padding-left: 60rem;
-        position: relative;
         &::before {
-            content: "";
-            position: absolute;
-            top: calc(50% - 2rem);
-            left: 0;
-            width: 50rem;
-            height: 4rem;
-            border-radius: 2rem;
             background: $white;
             @media only screen and (max-width: 650px) {
                 left: 15rem;
@@ -417,7 +418,6 @@ body {
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 4rem 8rem 50rem rgba(0, 0, 0, 0.81);
-            transition: all 300ms ease-in-out;
             cursor: url("/assets/icons/loupe.cur"), auto;
             @media only screen and (max-width: 650px) {
                 width: 260rem;
@@ -473,6 +473,9 @@ body {
                         right: 120rem;
                     }
                 }
+            }
+            &-button:focus {
+                box-shadow: none;
             }
         }
     }
@@ -577,6 +580,71 @@ body {
 
         &--open {
             transform: scale(1);
+        }
+    }
+}
+
+.works {
+    padding: 40rem 0;
+    background: $very-black;
+    &__title {
+        color: $white;
+        margin-bottom: 40rem;
+        &::before {
+            background: $white;
+        }
+    }
+    &__work {
+        display: flex;
+        justify-content: space-between;
+        min-height: 200rem;
+        margin-bottom: 80rem;
+        @media only screen and (max-width: 650px) {
+            min-height: unset;
+            flex-direction: column-reverse !important;
+            margin-bottom: 50rem;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &-img-link {
+            width: 320rem;
+            height: 200rem;
+            border-radius: 10rem;
+            box-shadow: 4rem 8rem 50rem rgba(0, 0, 0, 0.81);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            @media only screen and (max-width: 650px) {
+                width: 100%;
+                height: 170rem;
+            }
+        }
+        &-info {
+            width: 573rem;
+            @media only screen and (max-width: 650px) {
+                width: 100%;
+                margin-bottom: 30rem;
+            }
+            &-title {
+                color: $white;
+                font-family: "Open Sans", sans-serif;
+                margin-bottom: 20rem;
+            }
+            &-list {
+                padding-left: 20rem;
+                li {
+                    color: $white;
+                    margin-bottom: 8rem;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                margin-bottom: 15rem;
+            }
+        }
+        &.reverse {
+            flex-direction: row-reverse;
         }
     }
 }
