@@ -70,6 +70,8 @@ const renderCertificates = async () => {
         counterDOM.innerHTML = `${counter} / ${allCertificates.length}`;
         imageDOM.src = allCertificates[index].url;
         descriptionDOM.innerHTML = allCertificates[index].description;
+        
+        flkty.previous();
       }
     })
 
@@ -86,6 +88,8 @@ const renderCertificates = async () => {
         counterDOM.innerHTML = `${counter} / ${allCertificates.length}`;
         imageDOM.src = allCertificates[index].url;
         descriptionDOM.innerHTML = allCertificates[index].description;
+
+        flkty.next();
       }
     })
 
