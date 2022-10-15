@@ -448,7 +448,7 @@ body {
 }
 @media only screen and (max-width: 650px) {
   .certificates__title {
-    padding: 0 15rem 0 75rem;
+    padding: 0 15rem 0 15rem;
     margin-bottom: 40rem;
   }
 }
@@ -538,6 +538,7 @@ body {
   box-shadow: none;
 }
 .certificates .modal-certificates {
+  display: grid;
   position: fixed;
   top: 0;
   left: 0;
@@ -545,7 +546,6 @@ body {
   height: 100vh;
   background: rgba(0, 0, 0, 0.9);
   z-index: 2;
-  display: grid;
   transform: scale(0);
   transition: transform 300ms ease-in-out;
 }
@@ -730,7 +730,7 @@ body {
   .proyects__proyect {
     display: flex;
     min-height: unset;
-    flex-direction: column-reverse !important;
+    flex-direction: column-reverse;
     margin-bottom: 50rem;
   }
 }
@@ -824,6 +824,78 @@ body {
 .contacts__phone span {
   color: #F4F4F4;
   font-family: "Open Sans", sans-serif;
+}
+
+.footer {
+  padding: 40rem 0;
+  background: #0f1b1f;
+}
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40rem;
+}
+.footer__logo svg {
+  width: 177rem;
+  height: 23rem;
+}
+@media only screen and (max-width: 650px) {
+  .footer__logo svg {
+    width: 150rem;
+    height: 20rem;
+  }
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 650px) {
+  .footer__wrapper {
+    flex-direction: column;
+  }
+}
+.footer__nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30rem;
+}
+@media only screen and (max-width: 650px) {
+  .footer__nav-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15rem;
+    row-gap: 16remrem;
+    margin-bottom: 30rem;
+  }
+}
+.footer__nav-list a {
+  color: #F4F4F4;
+}
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  gap: 30rem;
+}
+@media only screen and (max-width: 650px) {
+  .footer__right {
+    align-items: center;
+    gap: 16rem;
+  }
+}
+.footer__phone {
+  display: flex;
+  align-items: center;
+  gap: 14rem;
+}
+.footer__phone svg {
+  width: 20rem;
+  height: 20rem;
+}
+.footer__phone span {
+  color: #F4F4F4;
+}
+.footer__link {
+  color: #F4F4F4;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -380,7 +380,7 @@ body {
     &__title {
         color: $white;
         @media only screen and (max-width: 650px) {
-            padding: 0 15rem 0 75rem;
+            padding: 0 15rem 0 15rem;
             margin-bottom: 40rem;
         }
     }
@@ -466,6 +466,7 @@ body {
     }
 
     .modal-certificates {
+        display: grid;
         position: fixed;
         top: 0;
         left: 0;
@@ -473,7 +474,6 @@ body {
         height: 100vh;
         background: rgba(black, 0.9);
         z-index: 2;
-        display: grid;
         transform: scale(0);
         transition: transform 300ms ease-in-out;
         &__counter {
@@ -647,7 +647,7 @@ body {
         @media only screen and (max-width: 650px) {
             display: flex;
             min-height: unset;
-            flex-direction: column-reverse !important;
+            flex-direction: column-reverse;
             margin-bottom: 50rem;
         }
         &:last-child {
@@ -735,5 +735,71 @@ body {
             color: $white;
             font-family: "Open Sans", sans-serif;
         }
+    }
+}
+
+.footer {
+    padding: 40rem 0;
+    background: $very-black;
+    &__logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40rem;
+        svg {
+            width: 177rem;
+            height: 23rem;
+            @media only screen and (max-width: 650px) {
+                width: 150rem;
+                height: 20rem;
+            }
+        }
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: 650px) {
+            flex-direction: column;
+        }
+    }
+    &__nav {
+        &-list {
+            list-style: none;
+            display: flex;
+            gap: 30rem;
+            @media only screen and (max-width: 650px) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 15rem;
+                row-gap: 16remrem;
+                margin-bottom: 30rem;
+            }
+            a {
+                color: $white;
+            }
+        }
+    }
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 30rem;
+        @media only screen and (max-width: 650px) {
+            align-items: center;
+            gap: 16rem;
+        }
+    }
+    &__phone {
+        display: flex;
+        align-items: center;
+        gap: 14rem;
+        svg {
+            width: 20rem;
+            height: 20rem;
+        }
+        span {
+            color: $white;
+        }
+    }
+    &__link {
+        color: $white;
     }
 }

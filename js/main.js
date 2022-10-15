@@ -108,7 +108,7 @@ const renderCertificates = async () => {
         descriptionDOM.innerText = "";            
       }, 300)
     })
-
+    
     modalDOM.classList.add("modal-certificates--open");
   }
 
