@@ -782,4 +782,48 @@ body {
   margin-bottom: 0;
 }
 
+.contacts {
+  padding: 40rem 0;
+  background: #151F28;
+}
+.contacts__title {
+  color: #F4F4F4;
+  margin-bottom: 40rem;
+}
+.contacts__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 650px) {
+  .contacts__wrapper {
+    align-items: flex-start;
+  }
+}
+.contacts__list {
+  display: flex;
+  gap: 20rem;
+}
+.contacts__list li a {
+  color: #F4F4F4;
+}
+@media only screen and (max-width: 650px) {
+  .contacts__list {
+    flex-direction: column;
+    gap: 16rem;
+  }
+}
+.contacts__phone {
+  display: flex;
+  align-items: center;
+  gap: 14rem;
+}
+.contacts__phone svg {
+  width: 20rem;
+  height: 20rem;
+}
+.contacts__phone span {
+  color: #F4F4F4;
+  font-family: "Open Sans", sans-serif;
+}
+
 /*# sourceMappingURL=main.css.map */

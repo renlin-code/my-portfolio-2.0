@@ -695,3 +695,45 @@ body {
         }
     }
 }
+
+.contacts {
+    padding: 40rem 0;
+    background: $black;
+    &__title {
+        color: $white;
+        margin-bottom: 40rem;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: 650px) {
+            align-items: flex-start;
+        }
+    }
+    &__list {
+        display: flex;
+        gap: 20rem;
+        li {
+            a {
+                color: $white;
+            }
+        }
+        @media only screen and (max-width: 650px) {
+            flex-direction: column;
+            gap: 16rem;
+        }
+    }
+    &__phone {
+        display: flex;
+        align-items: center;
+        gap: 14rem;
+        svg {
+            width: 20rem;
+            height: 20rem;
+        }
+        span {
+            color: $white;
+            font-family: "Open Sans", sans-serif;
+        }
+    }
+}
