@@ -869,9 +869,9 @@ body {
 @media only screen and (max-width: 650px) {
   .footer__nav-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 15rem;
-    row-gap: 16remrem;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 10rem;
+    row-gap: 16rem;
     margin-bottom: 30rem;
   }
 }
