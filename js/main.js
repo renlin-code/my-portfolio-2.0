@@ -127,7 +127,7 @@ const renderCertificates = async () => {
 
 
     darkFrontLayerDOM.classList.add("front-layer")
-    certificateDOM.src = item.url_mini;
+    certificateDOM.src = item.url;
 
     slideDOM.appendChild(darkFrontLayerDOM);
     slideDOM.appendChild(certificateDOM);
