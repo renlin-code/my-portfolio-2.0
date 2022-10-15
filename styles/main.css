@@ -114,16 +114,11 @@ h3, h4, h5, h6, .renlincode-subtitle {
   font-size: 30rem;
   line-height: 41.5rem;
   font-weight: 600;
-  padding-left: 60rem;
-  position: relative;
 }
 .section-title::before {
-  content: "";
-  position: absolute;
-  top: calc(50% - 2rem);
-  left: 0;
-  width: 50rem;
-  height: 4rem;
+  content: "---";
+  letter-spacing: -3rem;
+  padding-right: 10rem;
   border-radius: 2rem;
 }
 
@@ -143,9 +138,23 @@ body {
 }
 .onhover-light {
   transition: all 300ms ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 .onhover-light:hover {
   box-shadow: 0 0rem 50rem #00E991;
+}
+.onhover-light:hover .front-layer {
+  background: rgba(15, 27, 31, 0.8);
+}
+
+.front-layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 300ms ease-in-out;
 }
 
 .header-content-wrapper {
@@ -387,9 +396,6 @@ body {
   color: #151F28;
   margin-bottom: 40rem;
 }
-.about-me__title::before {
-  background: #151F28;
-}
 .about-me__wrapper {
   display: grid;
   grid-template-columns: 320rem auto;
@@ -440,14 +446,6 @@ body {
 .certificates__title {
   color: #F4F4F4;
 }
-.certificates__title::before {
-  background: #F4F4F4;
-}
-@media only screen and (max-width: 650px) {
-  .certificates__title::before {
-    left: 15rem;
-  }
-}
 @media only screen and (max-width: 650px) {
   .certificates__title {
     padding: 0 15rem 0 75rem;
@@ -487,12 +485,10 @@ body {
   }
 }
 .certificates__slider-slide {
-  position: relative;
   width: 300rem;
   height: 232rem;
   margin: 0 200rem;
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 4rem 8rem 50rem rgba(0, 0, 0, 0.81);
   cursor: url("/assets/icons/loupe.cur"), auto;
 }
@@ -501,17 +497,6 @@ body {
     width: 260rem;
     height: 200rem;
   }
-}
-.certificates__slider-slide:hover .front-layer {
-  background: rgba(15, 27, 31, 0.7);
-}
-.certificates__slider-slide .front-layer {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transition: all 300ms ease-in-out;
 }
 .certificates__slider-slide img {
   width: 100%;
@@ -666,9 +651,6 @@ body {
   color: #F4F4F4;
   margin-bottom: 40rem;
 }
-.works__title::before {
-  background: #F4F4F4;
-}
 .works__work {
   display: flex;
   justify-content: space-between;
@@ -727,6 +709,77 @@ body {
 }
 .works__work.reverse {
   flex-direction: row-reverse;
+}
+
+.proyects {
+  padding: 40rem 0;
+  background: #151F28;
+}
+.proyects__title {
+  color: #F4F4F4;
+  margin-bottom: 40rem;
+}
+.proyects__proyect {
+  display: grid;
+  grid-template-columns: 443rem 447rem;
+  justify-content: space-between;
+  min-height: 248rem;
+  margin-bottom: 60rem;
+}
+@media only screen and (max-width: 650px) {
+  .proyects__proyect {
+    display: flex;
+    min-height: unset;
+    flex-direction: column-reverse !important;
+    margin-bottom: 50rem;
+  }
+}
+.proyects__proyect:last-child {
+  margin-bottom: 0;
+}
+.proyects__proyect-img-link {
+  width: 100%;
+  height: 248rem;
+  border-radius: 10rem;
+  box-shadow: 4rem 8rem 50rem rgba(0, 0, 0, 0.81);
+  background-image: url("../assets/images/proyects/logist.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 650px) {
+  .proyects__proyect-img-link {
+    height: 170rem;
+  }
+}
+.proyects__proyect-info {
+  width: 100%;
+}
+@media only screen and (max-width: 650px) {
+  .proyects__proyect-info {
+    margin-bottom: 30rem;
+  }
+}
+.proyects__proyect-info-title {
+  color: #F4F4F4;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 20rem;
+}
+.proyects__proyect-info-list {
+  padding-left: 20rem;
+  margin-bottom: 15rem;
+}
+.proyects__proyect-info-list-title {
+  color: #F4F4F4;
+  margin-bottom: 10rem;
+  font-weight: 600;
+}
+.proyects__proyect-info-list li {
+  color: #F4F4F4;
+  margin-bottom: 8rem;
+}
+.proyects__proyect-info-list li:last-child {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

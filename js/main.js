@@ -117,7 +117,7 @@ const renderCertificates = async () => {
 
   allCertificates.forEach(item => {
     const slideDOM = document.createElement("div");
-    const slideFrontLayerDOM = document.createElement("div");
+    const darkFrontLayerDOM = document.createElement("div");
     const certificateDOM = document.createElement("img");
 
     slideDOM.classList.add("certificates__slider-slide", "onhover-light");
@@ -126,10 +126,10 @@ const renderCertificates = async () => {
     });
 
 
-    slideFrontLayerDOM.classList.add("front-layer")
+    darkFrontLayerDOM.classList.add("front-layer")
     certificateDOM.src = item.url_mini;
 
-    slideDOM.appendChild(slideFrontLayerDOM);
+    slideDOM.appendChild(darkFrontLayerDOM);
     slideDOM.appendChild(certificateDOM);
 
     sliderDOM.appendChild(slideDOM);
@@ -146,8 +146,7 @@ const renderCertificates = async () => {
 renderCertificates();
 
 
-
-// MY WORKS
+//MY WORKS
 const renderWorks = async () => {
   const url = "../data/works.json";
   const res = await fetch(url);
@@ -158,6 +157,7 @@ const renderWorks = async () => {
   allWorks.forEach(item => {
     const workDOM = document.createElement("div");
     const imgLinkDOM = document.createElement("a");
+    const darkFrontLayerDOM = document.createElement("div");
     const infoDOM = document.createElement("div");
     const titleDOM = document.createElement("h6");
     const listDOM = document.createElement("ul");
@@ -167,6 +167,7 @@ const renderWorks = async () => {
     const index = allWorks.indexOf(item);
     if (index % 2 !== 0) workDOM.classList.add("reverse");
     imgLinkDOM.classList.add("works__work-img-link","onhover-light");
+    darkFrontLayerDOM.classList.add("front-layer");
     infoDOM.classList.add("works__work-info");
     titleDOM.classList.add("works__work-info-title");
     listDOM.classList.add("works__work-info-list");
@@ -188,6 +189,7 @@ const renderWorks = async () => {
       listDOM.appendChild(listItemDOM);
     })
 
+    imgLinkDOM.appendChild(darkFrontLayerDOM);
     infoDOM.appendChild(titleDOM);
     infoDOM.appendChild(listDOM);
     infoDOM.appendChild(linkDOM);
@@ -197,5 +199,54 @@ const renderWorks = async () => {
     worksWrapperDOM.appendChild(workDOM);
   })
 }
-
 renderWorks();
+
+
+//PROYECTS
+const renderProyects = async () => {
+  const url = "../data/proyects.json";
+  const res = await fetch(url);
+  const allProyects = await res.json();
+
+  const proyectsWrapperDOM = document.querySelector(".proyects__wrapper");
+  
+  allProyects.forEach(item => {
+    const proyectDOM = document.createElement("div");
+    const imgLinkDOM = document.createElement("a");
+    const darkFrontLayerDOM = document.createElement("div");
+    const infoDOM = document.createElement("div");
+    const titleDOM = document.createElement("h6");
+    const listTitleDOM = document.createElement("p");
+    const listDOM = document.createElement("ul");
+  
+    proyectDOM.classList.add("proyects__proyect");
+    imgLinkDOM.classList.add("proyects__proyect-img-link","onhover-light");
+    darkFrontLayerDOM.classList.add("front-layer");
+    infoDOM.classList.add("proyects__proyect-info");
+    titleDOM.classList.add("proyects__proyect-info-title");
+    listTitleDOM.classList.add("proyects__proyect-info-list-title");
+    listDOM.classList.add("proyects__proyect-info-list");
+
+    imgLinkDOM.style.backgroundImage = `url(${item.backgroundUrl})`;
+    imgLinkDOM.href = item.deployAddress;
+    imgLinkDOM.target = "_blank";
+    imgLinkDOM.rel = "noopener noreferrer";
+    titleDOM.innerText = item.title;
+    listTitleDOM.innerText = "Что делал я по проекту:";
+    item.features.forEach(i => {
+      const listItemDOM = document.createElement("li");
+      listItemDOM.innerText = i;
+      listDOM.appendChild(listItemDOM);
+    })
+
+    imgLinkDOM.appendChild(darkFrontLayerDOM);
+    infoDOM.appendChild(titleDOM);
+    infoDOM.appendChild(listTitleDOM);
+    infoDOM.appendChild(listDOM);
+    proyectDOM.appendChild(imgLinkDOM);
+    proyectDOM.appendChild(infoDOM);
+
+    proyectsWrapperDOM.appendChild(proyectDOM);
+  })
+}
+renderProyects();
