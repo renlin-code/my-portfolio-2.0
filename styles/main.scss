@@ -79,6 +79,7 @@ body {
     font-size: 14rem;
     line-height: 20rem;
     @media only screen and (max-width: 650px) {
+        max-width: 320rem;
     }    
 }
 
