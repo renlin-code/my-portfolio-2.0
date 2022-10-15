@@ -134,7 +134,6 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 14rem;
   line-height: 20rem;
-  overflow-x: hidden;
 }
 .onhover-light {
   transition: all 300ms ease-in-out;
@@ -196,6 +195,7 @@ body {
 }
 
 .header {
+  width: 100%;
   position: relative;
   background: #151F28;
 }
@@ -305,6 +305,7 @@ body {
 }
 
 .hero {
+  width: 100%;
   background: #151F28;
   height: 565rem;
   position: relative;
@@ -389,6 +390,7 @@ body {
 }
 
 .about-me {
+  width: 100%;
   background: #F4F4F4;
   padding-top: 40rem;
 }
@@ -426,6 +428,7 @@ body {
 }
 
 .certificates {
+  width: 100%;
   background: #151F28;
   padding: 40rem 0 45rem;
 }
@@ -644,6 +647,7 @@ body {
 }
 
 .works {
+  width: 100%;
   padding: 40rem 0;
   background: #0f1b1f;
 }
@@ -712,6 +716,7 @@ body {
 }
 
 .proyects {
+  width: 100%;
   padding: 40rem 0;
   background: #151F28;
 }
@@ -783,6 +788,7 @@ body {
 }
 
 .contacts {
+  width: 100%;
   padding: 40rem 0;
   background: #151F28;
 }
@@ -827,6 +833,7 @@ body {
 }
 
 .footer {
+  width: 100%;
   padding: 40rem 0;
   background: #0f1b1f;
 }

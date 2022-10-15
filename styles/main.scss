@@ -78,7 +78,6 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 14rem;
     line-height: 20rem;
-    overflow-x: hidden;
     @media only screen and (max-width: 650px) {
     }    
 }
@@ -140,6 +139,7 @@ body {
 
 //BLOCKS
 .header {
+    width: 100%;
     position: relative;
     background: $black;
     &__content {
@@ -250,6 +250,7 @@ body {
 }
 
 .hero {
+    width: 100%;
     background: $black;
     height: 565rem;
     position: relative;
@@ -330,6 +331,7 @@ body {
 }
 
 .about-me {
+    width: 100%;
     background: $white;
     padding-top: 40rem;
     &__title {
@@ -365,6 +367,7 @@ body {
 }
 
 .certificates {
+    width: 100%;
     background: $black;
     padding: 40rem 0 45rem;
     @media only screen and (max-width: 650px) {
@@ -570,6 +573,7 @@ body {
 }
 
 .works {
+    width: 100%;
     padding: 40rem 0;
     background: $very-black;
     &__title {
@@ -632,6 +636,7 @@ body {
 }
 
 .proyects {
+    width: 100%;
     padding: 40rem 0;
     background: $black;
     &__title {
@@ -697,6 +702,7 @@ body {
 }
 
 .contacts {
+    width: 100%;
     padding: 40rem 0;
     background: $black;
     &__title {
@@ -739,6 +745,7 @@ body {
 }
 
 .footer {
+    width: 100%;
     padding: 40rem 0;
     background: $very-black;
     &__logo {
