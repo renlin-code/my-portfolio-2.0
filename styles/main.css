@@ -135,6 +135,12 @@ body {
   font-size: 14rem;
   line-height: 20rem;
 }
+@media only screen and (max-width: 650px) {
+  body {
+    max-width: 320rem;
+  }
+}
+
 .onhover-light {
   transition: all 300ms ease-in-out;
   position: relative;
@@ -400,7 +406,7 @@ body {
 }
 .about-me__wrapper {
   display: grid;
-  grid-template-columns: 320rem auto;
+  grid-template-columns: 418rem auto;
   column-gap: 20rem;
 }
 @media only screen and (max-width: 650px) {

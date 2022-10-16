@@ -341,7 +341,7 @@ body {
     }
     &__wrapper {
         display: grid;
-        grid-template-columns: 320rem auto;
+        grid-template-columns: 418rem auto;
         column-gap: 20rem;
         @media only screen and (max-width: 650px) {
             display: flex;
