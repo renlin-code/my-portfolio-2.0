@@ -108,8 +108,11 @@ const renderCertificates = async () => {
       imageDOM.addEventListener("touchend", (e) => {
         touchEndX = e.changedTouches[0].screenX;
 
-        if(touchEndX < touchStartX) next()
-        else prev();
+        if ((touchStartX - touchEndX  > 100) || (touchEndX - touchStartX  > 100)) {
+          
+          if(touchStartX > touchEndX) next()
+          else prev();  
+        }
       })
     }
     swipeHandler();
