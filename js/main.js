@@ -36,7 +36,7 @@ const renderCertificates = async () => {
 
     let counter = index + 1;
 
-    const checkArrowsStyle = () => {
+    const setArrowsDisabledStyle = () => {
       switch(true) {
         case index === 0 :
           prevDOM.classList.add("disabled");
@@ -51,14 +51,14 @@ const renderCertificates = async () => {
         nextDOM.classList.remove("disabled");
       }
     }
-    checkArrowsStyle();
+    setArrowsDisabledStyle();
     
     counterDOM.innerText = `${counter} / ${allCertificates.length}`;
 
     imageDOM.src = allCertificates[index].url;
     descriptionDOM.innerText = allCertificates[index].description;
 
-    prevDOM.addEventListener("click", () => {
+    const prev = () => {
       if (index > 0) {
         counterDOM.innerText = "";
         imageDOM.src = "";
@@ -67,7 +67,7 @@ const renderCertificates = async () => {
         index--;
         counter--;
 
-        checkArrowsStyle();
+        setArrowsDisabledStyle();
 
         counterDOM.innerText = `${counter} / ${allCertificates.length}`;
         imageDOM.src = allCertificates[index].url;
@@ -75,9 +75,10 @@ const renderCertificates = async () => {
         
         flkty.previous();
       }
-    })
+    }
+    prevDOM.addEventListener("click", () => prev())
 
-    nextDOM.addEventListener("click", () => {
+    const next = () => {
       if (index >= 0 && index < allCertificates.length - 1) {
         counterDOM.innerText = "";
         imageDOM.src = "";
@@ -85,7 +86,7 @@ const renderCertificates = async () => {
         index++;
         counter++;
         
-        checkArrowsStyle();
+        setArrowsDisabledStyle();
 
         counterDOM.innerText = `${counter} / ${allCertificates.length}`;
         imageDOM.src = allCertificates[index].url;
@@ -93,9 +94,29 @@ const renderCertificates = async () => {
 
         flkty.next();
       }
-    })
+    }
+    nextDOM.addEventListener("click", () => next())
 
-    closeDOM.addEventListener("click", () => {
+
+    const swipeHandler = () => {
+      let touchStartX, touchEndX;
+
+      imageDOM.addEventListener("touchstart", (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      })
+
+      imageDOM.addEventListener("touchend", (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+
+        if(touchEndX < touchStartX) next()
+        else prev();
+      })
+    }
+    swipeHandler();
+
+
+    const close = () => {
+      imageDOM.replaceWith(imageDOM.cloneNode(true));
       prevDOM.replaceWith(prevDOM.cloneNode(true));
       nextDOM.replaceWith(nextDOM.cloneNode(true));
       closeDOM.replaceWith(closeDOM.cloneNode(true));
@@ -107,7 +128,8 @@ const renderCertificates = async () => {
         imageDOM.src = "";
         descriptionDOM.innerText = "";            
       }, 300)
-    })
+    }
+    closeDOM.addEventListener("click", () => close())
     
     modalDOM.classList.add("modal-certificates--open");
   }
