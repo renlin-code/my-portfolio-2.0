@@ -78,9 +78,6 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 14rem;
     line-height: 20rem;
-    @media only screen and (max-width: 650px) {
-        max-width: 320rem;
-    }    
 }
 
 .onhover-light {
