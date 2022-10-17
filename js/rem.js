@@ -21,5 +21,6 @@ function onRem () {
 }
 
 window.addEventListener('resize', onRem)
+window.addEventListener('DOMContentLoaded', onRem)
 
 onRem()
